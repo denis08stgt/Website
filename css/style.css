@@ -1,1 +1,333 @@
+@font-face {
+  font-family: 'Panton Caps';
+  src: url('fonts/panton.black-caps-webfont.woff2') format('woff2'), /* Für modernere Browser */
+       url('fonts/panton.black-caps-webfont.woff') format('woff'); /* Für ältere Browser */
+  font-weight: normal;
+  font-style: normal;
+}
 
+/* Verwende die Schriftart in deinen CSS-Regeln */
+body {
+  font-family: 'Panton Caps', sans-serif;
+}
+a {
+  color: #1f1f1f;
+  text-decoration: none !important;
+  outline: none !important;
+  transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  line-height: normal;
+  color: #111111;
+  margin: 0;
+}
+
+p {
+  margin: 20px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.layout_padding {
+  padding-top: 90px;
+  padding-bottom: 0;
+}
+
+.padding_0 {
+  padding: 0;
+}
+
+.logo img,
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 50px;
+  }
+}
+
+.navbar-nav {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: #282828;
+  font-size: 18px;
+  font-family: 'Panton Caps', Arial, sans-serif;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.theme-toggle button {
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  background-color: #5865f1;
+}
+
+.theme-toggle button:hover {
+  background-color: #3c44a4 !important;
+}
+
+.theme-toggle .themeIcon {
+  width: 36px;
+  height: 36px;
+}
+
+.theme-icon:hover,
+.dropdown-toggle:hover {
+  background-color: #3c44a4 !important;
+}
+
+.banner_section {
+  width: 100%;
+  float: left;
+  background-image: url(../images/banner-bg.png);
+  height: auto;
+  padding-bottom: 90px;
+}
+
+.titel {
+  width: 100%;
+  float: left;
+  font-size: 50px;
+  color: #fdfdfe;
+  text-align: center;
+  padding-bottom: 40px;
+  font-family: 'Panton Caps', Arial, sans-serif;
+}
+
+.titel2 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #fdfdfe;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Panton', Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .titel2 {
+    font-size: 24px;
+  }
+}
+
+.ellipse {
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+
+.über_mich_titel {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #282828;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Panton Caps', Arial, sans-serif;
+}
+
+.über_mich_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #282828;
+  text-align: center;
+  margin-left: 0;
+  font-family: 'Panton', Arial, sans-serif;
+}
+
+.about_bg {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact_section {
+  width: 100%;
+  float: left;
+}
+
+.contact_titel {
+  width: 100%;
+  font-size: 40px;
+  color: #282828;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Panton Caps', Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .contact_titel {
+    font-size: 25px;
+  }
+}
+
+.contact_options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Panton Caps', Arial, sans-serif;
+}
+
+.contact_options .icon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.contact_options .icon img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+@media (max-width: 50px) {
+  .contact_options {
+    width: 15px;
+    margin-right: 10px;
+  }
+}
+
+.contact_options .contact_text {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact_options .contact_text {
+    font-size: 12px;
+  }
+}
+
+.footer_section {
+  width: 100%;
+  float: left;
+  background-image: url(../images/footer-bg.png);
+  height: auto;
+  padding-bottom: 50px;
+  margin-top: 90px;
+}
+
+.landing_text {
+  width: 100%;
+  float: left;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: #fefeff;
+  font-family: 'Panton Caps', Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .landing_text {
+    font-size: 17px;
+  }
+}
+
+.social_icon {
+  text-align: center;
+}
+
+.social_icon ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.social_icon li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+}
+
+.dropdown-toggle {
+  text-align: center;
+  font-family: 'Panton Caps', Arial, sans-serif;
+  color: #ffffff;
+}
+
+.dropdown-item text {
+  font-family: 'Panton Caps', Arial, sans-serif;
+  color: #fff;
+}
+
+.dropdown-menu {
+  right: 0%;
+  left: auto;
+  animation: dropdownAnimation 0.3s ease-in-out;
+}
+
+.ml-auto {
+  margin-left: 5px;
+}
+
+@keyframes dropdownAnimation {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #5c5eff;
+}
+
+.dropdown-item img {
+  height: 40px;
+}
+
+body.dunkelmodus {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dunkelmodus a {
+  color: #ffffff;
+}
+
+body.dunkelmodus .navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+body.dunkelmodus .navbar-light .navbar-toggler-icon {
+  background-image: url("images/Hellmodus.png");
+}
+
+body.dunkelmodus .navbar-nav .nav-link1,
+body.dunkelmodus .navbar-nav .nav-link2,
+body.dunkelmodus .navbar-nav .nav-link3 {
+  color: #ffffff;
+}
+
+body.dunkelmodus .about_me_titel {
+  color: #ffffff;
+}
