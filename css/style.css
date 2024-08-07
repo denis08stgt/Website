@@ -1,0 +1,545 @@
+/* Panton Caps als Schriftart */
+@font-face {
+  font-family: 'Panton Caps';
+  src: url('fonts/panton.black-caps-webfont.woff2') format('woff2'),
+       url('fonts/panton.black-caps-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Schriftart für alles */
+body {
+  font-family: 'Panton Caps', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Titel */
+.layout_padding {
+  padding-top: 90px;
+  padding-bottom: 0;
+}
+
+/* Deniis.dev Banner Logo */
+.logo img,
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 50px;
+  }
+}
+
+/* Navigations Bar */
+/* Verschiebe die Navbar-Elemente nach links */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-start; /* Verschiebt die Elemente nach links */
+  width: 100%;
+  margin-left: 541px; /* Optional: Füge einen Abstand vom linken Rand hinzu */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px; /* Optional: Abstand zwischen den Elementen */
+}
+
+/* Optional: Wenn du das Logo oder andere Elemente in der Navbar verschieben möchtest */
+.navbar-brand {
+  margin-left: 0; /* Setze den Abstand zum linken Rand auf 0, um es nach links zu verschieben */
+}
+
+/* Allgemeine Stilregel für die Navigationselemente */
+.nav-link {
+  position: relative;
+  color: #282828; /* Standard Textfarbe */
+  text-decoration: none; /* Entferne die Standard-Unterstreichung */
+  font-size: 18px;
+  margin: 0 10px;
+  display: inline-block;
+  padding-bottom: 2px; /* Platz für den unteren Balken schaffen */
+}
+
+/* Hover-Effekt für die Navigationselemente */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #5865f1; /* Die Farbe des Balkens */
+  transition: width 0.3s ease; /* Sanfter Übergangseffekt */
+}
+
+/* Stil für Hover-Zustand */
+.nav-link:hover::after {
+  width: 100%; /* Balken auf die volle Breite ausdehnen */
+}
+
+/* Optional: Stil für aktive Links, um den Balken auch bei der aktiven Seite zu zeigen */
+.nav-item.active .nav-link::after {
+  width: 100%; /* Balken auf die volle Breite ausdehnen, wenn der Link aktiv ist */
+}
+
+/* Dark/Light Modus */
+.theme-toggle button {
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  background-color: #5865f1;
+}
+
+.theme-toggle button:hover {
+  background-color: #3c44a4 !important;
+}
+
+.theme-toggle .themeIcon {
+  width: 36px;
+  height: 36px;
+}
+
+body.dunkelmodus {
+  background-color: #121212;
+  color: #E0E0E0;
+}
+
+body.dunkelmodus .cookie-banner {
+  background-color: #1C1C1C;
+}
+
+body.dunkelmodus .dropdown-item {
+  color: #E0E0E0;
+}
+
+body.dunkelmodus .dropdown-menu,
+body.dunkelmodus .nav-link,
+body.dunkelmodus .not_found_text,
+body.dunkelmodus .container_not_found {
+  color: #E0E0E0 !important;
+  background-color: #121212 !important;
+}
+
+/* Sprachauswahl Dropdown Menü Abschnitt */
+.dropdown-menu {
+  right: 0%;
+  bottom: -120px;
+  left: auto;
+  animation: dropdownAnimation 0.3s ease-in-out;
+}
+
+.ml-auto {
+  margin-left: 5px;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #5c5eff !important;
+}
+
+.dropdown-item img {
+  height: 40px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #3c44a4 !important;
+}
+
+.dropdown-item.active {
+  background-color: #5c5eff !important;
+}
+
+/* Titel Hintergrund Banner */
+.banner_section {
+  background-image: url(../images/banner-bg.png); /* Hintergrundbild für den Banner-Bereich */
+  background-size: cover; /* Bild deckt den gesamten Bereich ab */
+  background-position: center center; /* Bild wird zentriert angezeigt */
+  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+  background-attachment: fixed; /* Bild bleibt beim Scrollen fixiert */
+  padding-bottom: 90px;
+}
+
+/* Seiten Titel */
+.titel {
+  width: 100%;
+  float: left;
+  font-size: 50px;
+  color: #fdfdfe;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.titel2 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #fdfdfe;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .titel2 {
+    font-size: 24px;
+  }
+}
+
+/* Ellipse */
+.ellipse {
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+
+/* Über mich Abschnitt */
+.über_mich_titel {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #282828;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.über_mich_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #282828;
+  text-align: center;
+  margin-bottom: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Meine derzeitigen Programmiersprachen Abschnitt */
+.currently_programming_languages {
+  width: 100%;
+  font-size: 40px;
+  color: #282828;
+}
+
+.programming_languages {
+  display: flex;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.programming_languages img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.programming_languages p {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Projekte Abschnitt */
+.project {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+}
+
+.project_title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project_description {
+  font-size: 16px;
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.project_title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #5865f1;
+  margin-top: 10px;
+}
+
+.project_description::before {
+  content: "\2022";
+  color: #5865f1;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Footer Abschnitt */
+.footer_section {
+  background-image: url(../images/footer-bg.png);
+  background-size: cover; /* Bild deckt den gesamten Bereich ab */
+  background-position: center center; /* Bild wird zentriert angezeigt */
+  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+  background-attachment: fixed; /* Bild bleibt beim Scrollen fixiert */
+  padding-bottom: 90px;
+}
+
+.landing_text {
+  width: 100%;
+  float: left;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: #fefeff;
+}
+
+@media (max-width: 768px) {
+  .landing_text {
+    font-size: 17px;
+  }
+}
+
+.social_icon {
+  text-align: center;
+}
+
+.social_icon ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.social_icon li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Cookies Akzeptieren Abschnitt */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  left: 88%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
+  background-color: #e6e6e6;
+  text-align: center;
+  border-radius: 25px;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px; /* Abstand zwischen den Buttons */
+}
+
+/* Banner sichtbar, wenn nicht akzeptiert */
+.cookie-banner.show {
+  display: block;
+}
+
+.cookie-banner.accepted {
+  animation: slideRight 0.3s ease-out;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.cookie-banner p {
+  margin: 0;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.accept-cookies, .decline-cookies {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: #5865f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.accept-cookies:hover {
+  background-color: #3c47a0;
+}
+
+.decline-cookies {
+  background-color: #ff6b6b; /* Farbe für den Decline-Button */
+}
+
+.decline-cookies:hover {
+  background-color: #e94e4e; /* Hover-Farbe für den Decline-Button */
+}
+
+/* Mobilgeräte Anpassungen */
+@media (max-width: 768px) {
+  /* Logo Größe auf mobilen Geräten */
+  .logo {
+    width: 100px;
+  }
+
+  /* Padding für den Titel auf mobilen Geräten */
+  .titel {
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+
+  /* Padding für den Titel2 auf mobilen Geräten */
+  .titel2 {
+    font-size: 20px;
+  }
+
+  /* Über mich Abschnitt */
+  .über_mich_titel {
+    font-size: 30px;
+  }
+
+  .über_mich_text {
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+
+  /* Schriftgröße der Programmier-Sprachen */
+  .currently_programming_languages {
+    font-size: 30px;
+  }
+
+  .programming_languages img {
+    width: 200px;
+  }
+
+  .programming_languages p {
+    font-size: 14px;
+  }
+
+  /* Projekte Abschnitt */
+  .project {
+    padding: 15px;
+  }
+
+  .project_title {
+    font-size: 20px;
+  }
+
+  .project_description {
+    font-size: 14px;
+  }
+
+  /* Footer Abschnitt */
+  .landing_text {
+    font-size: 24px;
+  }
+
+  /* Cookie Banner */
+  .cookie-banner {
+    bottom: 100px; /* Verschiebt das Banner weiter nach oben, verringere den Wert, um es weiter nach oben zu verschieben */
+    width: 100%;
+    max-width: 350px;
+    left: 50%; /* Zentriert das Banner horizontal */
+    transform: translateX(-50%); /* Verschiebt das Banner um die Hälfte seiner eigenen Breite nach links */
+  }  
+
+  .cookie-banner p {
+    font-size: 14px;
+  }
+
+  .accept-cookies, .decline-cookies {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    bottom: -100px; /* Reduziere den Abstand vom unteren Rand für kleinere Bildschirme */
+  }
+
+  .banner_section {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Bild bewegt sich mit dem Inhalt beim Scrollen */
+  }
+
+  /* Hintergrundbild für den Footer-Bereich */
+  .footer_section {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Bild bewegt sich mit dem Inhalt beim Scrollen */
+  }
+
+  .programming_languages {
+    position: relative; /* Macht den Container zum Bezugspunkt für das absolute Positionieren des Bildes */
+    padding: 20px; /* Etwas Abstand um den Container */
+  }
+
+  .programming_languages img {
+    display:none
+  }
+
+  .programming_languages p {
+    position: relative; /* Relativ positioniert, damit es unter dem Bild angezeigt wird */
+    font-size: 14px; /* Schriftgröße auf mobilen Geräten anpassen */
+    color: #282828; /* Textfarbe */
+    background: rgba(255, 255, 255, 0.8); /* Halbtransparenter Hintergrund für bessere Lesbarkeit */
+    padding: 10px; /* Abstand um den Text herum */
+    display: block; /* Text als Block-Element anzeigen */
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-start; /* Verschiebt die Elemente nach links */
+    width: 100%;
+    margin-left: 0px; /* Optional: Füge einen Abstand vom linken Rand hinzu */
+  }
+  .ml-auto {
+    margin-left: 25px;
+    margin-top: -38px;
+    border: none; /* Sicherstellen, dass keine unerwünschten Ränder vorhanden sind */
+    cursor: pointer; /* Zeigt an, dass der Button klickbar ist */
+    box-sizing: border-box; /* Bezieht die Padding- und Border-Werte in die Gesamtgröße ein */
+  }
+  
+  .dropdown-toggle {
+    margin-left: 30px;
+  }
+
+  .ml-2 {
+    margin-left: 9px;
+    margin-top: 10px;
+  }
+
+  .theme-toggle button {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    background-color: #5865f1;
+    border: none; /* Sicherstellen, dass keine unerwünschten Ränder vorhanden sind */
+    cursor: pointer; /* Zeigt an, dass der Button klickbar ist */
+    box-sizing: border-box; /* Bezieht die Padding- und Border-Werte in die Gesamtgröße ein */
+  }
+  
+  .theme-toggle button:focus {
+    outline: none; /* Entfernt den Standard-Fokus-Rahmen, falls nötig */
+  }
+}

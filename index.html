@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DenisSTGT.de - Welcome to my personal website. Learn more about my projects, skills, and hobbies.">
+  <meta name="keywords" content="Denis, Stuttgart, programming, projects, web development, HTML, CSS, JavaScript">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>DenisSTGT.de • Redirecting...</title>
+
+  <style>
+    /* Entferntes CSS für mobile Benachrichtigung */
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+
+      function getIP(callback) {
+        fetch('https://api.ipify.org?format=json')
+          .then(response => response.json())
+          .then(data => callback(data.ip))
+          .catch(error => console.error('Error fetching IP address:', error));
+      }
+
+      function getCountryFromIP(ip, callback) {
+        fetch('https://api.ipgeolocation.io/ipgeo?apiKey=cc579e3245224e86a5e06f10aca84751&ip=' + ip)
+          .then(response => response.json())
+          .then(data => {
+            console.log('Country data:', data); // Debugging-Ausgabe
+            const country = data.country_name;
+            callback(country);
+          })
+          .catch(error => console.error('Error fetching country from IP:', error));
+      }
+
+      function redirectToLanguage() {
+        const userLanguage = getCookie('userLanguage');
+        const cookiesStatus = getCookie('cookies');
+
+        console.log('Cookies Status:', cookiesStatus); // Debugging-Ausgabe
+        console.log('User Language:', userLanguage); // Debugging-Ausgabe
+
+        if (cookiesStatus === 'accepted') {
+          // Cookies akzeptiert, leite basierend auf gespeicherter Sprache weiter
+          if (userLanguage === 'de' || userLanguage === 'en') {
+            window.location.href = `/${userLanguage}/`;
+          } else {
+            // Keine gültige Sprache gespeichert, leiten nach Deutsch oder Englisch basierend auf IP
+            getIP(ip => {
+              getCountryFromIP(ip, country => {
+                if (country === 'Germany') {
+                  window.location.href = '/de/';
+                } else {
+                  window.location.href = '/en/';
+                }
+              });
+            });
+          }
+        } else {
+          // Cookies nicht akzeptiert, leiten basierend auf IP
+          getIP(ip => {
+            getCountryFromIP(ip, country => {
+              if (country === 'Germany') {
+                window.location.href = '/de/';
+              } else {
+                window.location.href = '/en/';
+              }
+            });
+          });
+        }
+      }
+
+      // Keine Überprüfung auf Mobilgerät mehr
+      redirectToLanguage();
+    });
+  </script>
+</head>
+
+<body>
+  <p>Redirecting...</p>
+</body>
+
+</html>

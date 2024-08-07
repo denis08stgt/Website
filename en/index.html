@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DenisSTGT.de - Welcome to my personal website. Learn more about my projects, skills, and hobbies.">
+  <meta name="keywords" content="Denis, Stuttgart, programming, projects, web development, HTML, CSS, JavaScript">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>DenisSTGT.de • Home</title>
+  <base href="../">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+</head>
+<style>
+  /* Light/Dark Mode*/
+  body.dunkelmodus .über_mich_text,
+  body.dunkelmodus .über_mich_titel,
+  body.dunkelmodus .currently_programming_languages {
+    color: #E0E0E0;
+    background-color: #121212;
+  }
+  body.dunkelmodus .project,
+  body.dunkelmodus .project_title,
+  body.dunkelmodus .project_description {
+    color: #E0E0E0;
+    background-color: #1C1C1C;    
+  }
+  /* Light/Dark Mode*/
+</style>
+<body>
+  <div class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="logo">
+          <a href="">
+            <img src="images/Logo.png" alt="Logo">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item-github">
+              <a class="nav-link" href="https://github.com/denis08stgt">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/contact">Contact</a>
+            </li>
+          </ul>
+          <div class="theme-toggle ml-2">
+            <button id="themeButton" class="btn btn-secondary" type="button" style="background-color: #5865f1;">
+              <img id="themeIcon" class="themeIcon" style="display: none;" alt="Theme Icon">
+            </button>
+          </div>
+          <div class="dropdown ml-auto">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="background-color: #5865f1;">
+              Language
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+              <a class="dropdown-item active" href="/en/">
+                <img src="images/Englisch.png" alt="Englisch"> English
+              </a>
+              <a class="dropdown-item" href="/de/">
+                <img src="images/Deutsch.png" alt="Deutsch"> Deutsch
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="banner_section layout_padding">
+    <div class="container">
+      <h1 class="titel">DenisSTGT.de</h1>
+      <h2 class="titel2">Welcome to my website!</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ellipse">
+      <img class="ellipse-image" src="images/Ellipse.png" alt="Ellipse">
+    </div>
+  </div>
+  <div class="about_section">
+    <div class="container">
+      <h1 class="über_mich_titel">About me</h1>
+      <p class="über_mich_text">Hello, I am Denis, <span id="age"></span> years old, live in Stuttgart located in Germany, Baden-Württemberg<span id="grade"></span>. Besides my
+        enthusiasm for programming, I have other interesting skills and characteristics. I speak fluent German and
+        sufficient English, which enables me to communicate with people from different countries and cultures. These
+        language skills not only open up new opportunities for me in the field of programming, but also in the field of
+        international cooperation and cultural exchange. Besides my passion for programming, I have other hobbies and
+        interests. In my free time, I am in the youth fire brigade, the youth red cross and play handball. One of my
+        strengths is the ability to recognize and solve problems. This applies not only to programming, but also to
+        everyday life. I am a team player and find it fulfilling to find creative solutions in group projects and to
+        achieve goals together. I am grateful for the many opportunities that programming offers me and I am determined
+        to pursue my passion. I am curious about future projects and challenges and look forward to continuing to do my
+        best to develop my skills as a programmer.</p>
+      <h2 class="currently_programming_languages">My currently programming languages</h2>
+      <div class="programming_languages">
+        <img src="images/HTML-CSS-JS.png" alt="HTML, CSS, JS">
+        <p>I have a solid understanding of HTML, JS, and CSS, and I have already successfully created websites. Although
+          I have acquired a considerable amount of knowledge, I am always motivated to expand my skills and continue my
+          personal growth. I am currently in a continuous learning process, aiming to deepen my abilities and explore
+          new technologies. With my current knowledge, I am capable of designing creative and appealing websites,
+          developing Discord bots, and writing scripts.</p>
+      </div>
+      <!-- Projekte Abschnitt -->
+      <div class="projects_section layout_padding">
+        <div class="container">
+          <h1 class="projects_title">My Projects</h1>
+          <div class="project">
+            <h2 class="project_title">Nature.net (April 2021 - March 2022) / McNature.de (December 2022 - May 2023)</h2>
+            <p class="project_description">Nature.net was my first attempt at running a Minecraft server. Despite my enthusiasm for the game and my efforts to build a thriving community, I had to shut down the server due to my limited knowledge of server administration at the time.</p>
+            <p class="project_description">However, the passion for the project never left me, so in 2022, I attempted a fresh start with the McNature.de server. Initially, things didn't go smoothly, and the server struggled to attract players. But when the SMP mode was introduced, everything changed. The server flourished and attracted a loyal player base of about 60 players.</p>
+            <p class="project_description">Although the success was short-lived, and the player numbers dwindled over time, McNature.de was a valuable learning experience for me. Managing the server not only allowed me to acquire technical skills in server administration and plugin development but also improved important soft skills such as teamwork, communication, and community management.</p>
+            <p class="project_description">Ultimately, I had to close the server in 2023 because I realized that my knowledge in Java programming and server administration wasn't sufficient to sustainably operate the server in the long run. Nevertheless, the time I spent with Nature.net and McNature.de was a valuable experience that greatly influenced my personal and professional development.</p>
+          </div>
+          <div class="project">
+            <h2 class="project_title">Discord Bot (June 2023 - January 2024)</h2>
+            <p class="project_description">My next major project was the development of a Discord bot. Initially, everything went smoothly, and I was excited about the opportunities it presented. My goal was to create a bot that stands out from others and offers many unique features.</p>
+            <p class="project_description">I invested a lot of time and energy into perfecting my bot. I added numerous features, designed beautiful embeds and texts, integrated custom emojis, and even designed a banner for the bot. My ambitions knew no bounds, and I aimed to create the best Discord bot ever.</p>
+            <p class="project_description">However, I encountered significant obstacles when developing the accompanying website for my bot. Creating an appealing and functional web panel was a challenge for which I was not adequately prepared. My lack of knowledge and experience in web development became evident to me as I attempted to tackle this task.</p>
+            <p class="project_description">Despite my failure to successfully complete the project, working on my Discord bot was a valuable learning experience. I expanded my knowledge in bot programming, deepened my understanding of the Discord API, and further developed my design and creativity thinking. Even though the project didn't yield the results I had hoped for, it was an important step in my personal and professional development.</p>
+          </div>    
+          <div class="project">
+            <h2 class="project_title">Website Development (November 2023 - Now)</h2>
+            <p class="project_description">My latest project involved the development of this website, DenisSTGT.de. It was a significant undertaking that allowed me to showcase my skills in web development and design.</p>
+            <p class="project_description">I worked on various aspects of the website, including the design, functionality, and content. The goal was to create a professional and user-friendly platform that effectively represents my skills and projects.</p>
+            <p class="project_description">Throughout this project, I learned a lot about web development best practices, responsive design, and user experience optimization. The process of creating and maintaining this website has been both challenging and rewarding, and I am excited about the future opportunities it may bring.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="cookie-banner" class="cookie-banner">
+    <p>This website uses cookies to improve your experience. By using this website, you consent to the use of cookies. For more details, <a href="/en/information_on_cookies/" class="cookie-info-link">click here</a>.</p>
+    <button id="accept-cookies" class="accept-cookies">Accept</button>
+    <button id="decline-cookies" class="decline-cookies">Decline</button>
+  </div>
+  <div class="footer_section layout_padding">
+    <div class="container">
+      <div class="footer_main">
+        <h1 class="landing_text"><span id="copyright"></span> DenisSTGT.de</h1>
+        <h1 class="landing_text">Website built and developed by DenisSTGT</h1>
+      </div>
+      <div class="social_icon">
+        <ul>
+          <li><a class="socials" href="https://github.com/denis08stgt"><img src="images/Github.png" alt="GitHub"></a></li>
+          <li><a class="socials" href="https://discord.com/users/1110233826283761715"><img src="images/Discord.png" alt="Discord"></a></li>
+          <li><a class="socials" href="https://www.youtube.com/channel/UCIEu9LlLDALJkUGOZS5sVzA"><img src="images/YouTube.png" alt="YouTube"></a></li>
+          <li><a class="socials" href="https://www.instagram.com/denis.stgt/"><img src="images/Instagram.png" alt="Instagram"></a></li>
+          <li><a class="socials" href="https://twitter.com/denis_stgt/"><img src="images/X.png" alt="X"></a></li>
+        </ul>
+      </div>
+      <div class="legal_links text-center">
+        <ul>
+          <a href="/en/privacy_policy/" style="font-size: 14px;">Privacy policy</a>
+          <a>•</a>
+          <a href="/en/imprint/" style="font-size: 14px;">Imprint</a>
+          <a>•</a>
+          <a href="/en/information_on_cookies/" style="font-size: 14px;">Information on cookies</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/Darkmode.js"></script>
+  <script src="js/Cookies.js"></script>
+  <script src="js/Copyright.js"></script>
+  <script src="js/Language.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Aktuelles Datum
+    var currentDate = new Date();
+    
+    // Geburtsdatum
+    var birthDate = new Date('2008-09-16');
+    
+    // Differenz in Millisekunden zwischen den beiden Daten
+    var difference = currentDate - birthDate;
+    
+    // Berechne das Alter in Jahren
+    var age = Math.floor(difference / (1000 * 60 * 60 * 24 * 365.25));
+
+    // Festgelegte Daten für den Schuljahresbeginn
+    var schoolYears = [
+        { year: 2024, start: new Date('2023-09-09'), grade: " and go to 9th grade" },
+        { year: 2025, start: new Date('2024-09-07'), grade: " and go to 10th grade" }
+    ];
+
+    // Durchsuche die festgelegten Daten und finde das passende Schuljahr
+    var currentGrade = "";
+    for (var i = 0; i < schoolYears.length; i++) {
+        if (currentDate >= schoolYears[i].start) {
+            currentGrade = schoolYears[i].grade;
+        }
+    }
+
+    // Füge das aktuelle Schuljahr in das HTML-Element ein
+    document.getElementById('grade').textContent = currentGrade;
+
+    // Füge das Alter in das HTML-Element ein
+    document.getElementById('age').textContent = age;
+  </script>
+</body>
+
+</html>
